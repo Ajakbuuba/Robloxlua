@@ -15,7 +15,7 @@ end)
 
 tab:Label("Label")
 
-tab:Keybind("Keybind", Enum.KeyCode.E, function(t)
+tab:KeyBind("Keybind", Enum.KeyCode.E, function(t)
    
 end)
 
