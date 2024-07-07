@@ -71,4 +71,4 @@ end)
 
 local TextboxKeybind = UIFunctions:CreateTextbox('Notification', 'Text', function(Value)
     Library:CreateNotification('Notification', Value, 5)
-end
+end)
