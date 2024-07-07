@@ -1,37 +1,32 @@
 
-local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/astraln/SentinelUILIB/main/UI.lua', true))()
 
-local s = VLib:Window("VEP HUB", "GAMENAME", "G")
+local window = Library:Window('Sentinel')
 
-local ss = s:Tab("Tab 1")
+local tab = window:Tab('Home')
 
-ss:Button("Button",function()
-print("Pressed!")
-end)
-
-
-ss:Toggle("Toggle",function(t)
-print(t)
-    end)
-
-
-ss:Slider("Slider",0,100,70,function(t)
-print(t)
-end)
-
-
-ss:Dropdown("Dropdown",{"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"},function(t)
-print(t)
-end)
+tab:Button('Button', function()
    
-   
-ss:Colorpicker("Colorpicker",Color3.fromRGB(255, 1, 1),function(t)
-print(t)
-    end)
-
-ss:Textbox("Textbox", true,function(t)
-print(t)
 end)
 
-ss:Label("Label")
-s:Tab("Tab 2")
+tab:Toggle('Toggle',false, function(t)
+   
+end)
+
+tab:Label("Label")
+
+tab:Keybind("Keybind", Enum.KeyCode.E, function(t)
+   
+end)
+
+local dropdown = tab:Dropdown("Dropdown", {"1", "2",'3','4','5','6','7','8'}, function(item)
+    print(item)
+end)
+
+tab:Button('Refresh', function()
+    dropdown:RefreshDropdown({'69'})
+end)
+
+tab:Slider("Slider", 16, 1000, 16, function()
+
+end)
